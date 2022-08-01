@@ -1,0 +1,19 @@
+{
+    "name": "tarikul/contact",
+    "description": "This package will store contact information with sending email.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tarikul\\Contact\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tarikul Hasan Shuvo",
+            "email": "tarikul15-7944@diu.edu.bd"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
