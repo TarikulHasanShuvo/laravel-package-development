@@ -15,5 +15,12 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tarikul\\Contact\\ContactServiceProvider"
+            ]
+        }
+    }
 }
