@@ -34,7 +34,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        Mail::to($request->email)->send(new SendContactMail($request->name, $request->message));
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+        ]);
+
+        if (!empty(env('MAIL_USERNAME')) && !empty(env('MAIL_PASSWORD'))) {
+            Mail::to($request->email)->send(new SendContactMail($request->name, $request->message));
+        }
         Contact::create($request->except('_token'));
         return redirect()->route('contact.index')->with('success', 'Message sent successfully');
     }

@@ -1,6 +1,6 @@
 @component('mail::message')
 # Hi, {{ $name }}
-####Welcome to our app.
+#### Welcome to our app.
 
 {{ $message ?? '' }}
 
